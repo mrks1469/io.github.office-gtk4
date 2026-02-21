@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.mrks1469.office-gtk4</id>
+  
+  <developer id="io.github.mrks1469">
+  <name>Manpreet Singh</name>
+  </developer>
+
+  <name>Office-GTK4</name>
+  <summary>Microsoft 365 in a native GTK4 window</summary>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  
+  <screenshots>
+  <screenshot type="default">
+    <image>https://raw.githubusercontent.com/mrks1469/io.github.office-gtk4/d69dc19227352565744548bcecd5261c7ce3e9c0/Screenshots/screenshot.png</image>
+</screenshots>
+
+  <description>
+    <p>
+      Office-GTK4 wraps Microsoft 365 Online (Word, Excel, PowerPoint, OneNote,
+      Outlook) in a native GTK4 / libadwaita window using WebKitGTK. Sessions
+      and cookies are persisted so you stay logged in between launches.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">io.github.mrks1469.office-gtk4.desktop</launchable>
+
+  <url type="homepage">https://github.com/mrks1469/io.github.office-gtk4</url>
+  <url type="vcs-browser">https://github.com/mrks1469/io.github.office-gtk4</url>
+
+  <provides>
+    <binary>office-gtk4</binary>
+  </provides>
+
+  <requires>
+    <internet>always</internet>
+  </requires>
+
+  <recommends>
+    <display_length compare="ge">800</display_length>
+  </recommends>
+
+  <categories>
+    <category>Office</category>
+    <category>Network</category>
+  </categories>
+
+  <keywords>
+    <keyword>word</keyword>
+    <keyword>excel</keyword>
+    <keyword>powerpoint</keyword>
+    <keyword>onenote</keyword>
+    <keyword>outlook</keyword>
+    <keyword>microsoft</keyword>
+    <keyword>office</keyword>
+  </keywords>
+
+  <releases>
+    <release version="1.0.0" date="2025-09-01"/>
+  </releases>
+
+  <content_rating type="oars-1.1"/>
+</component>
+
+

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Office-GTK4
+GenericName=Office-GTK4
+Comment=Microsoft 365 in a native GTK4 window
+Exec=office-gtk4
+Icon=io.github.mrks1469.office-gtk4
+Terminal=false
+Categories=Office;Network;
+Keywords=word;excel;powerpoint;onenote;outlook;office;microsoft;
+StartupWMClass=io.github.mrks1469.office-gtk4

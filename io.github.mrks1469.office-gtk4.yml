@@ -1,0 +1,55 @@
+app-id: io.github.mrks1469.office-gtk4
+runtime: org.gnome.Platform
+runtime-version: '49'
+sdk: org.gnome.Sdk
+command: office-gtk4
+
+finish-args:
+  # ── Display ──────────────────────────────────────────────────────────────
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --share=ipc
+  - --device=dri
+  - --env=GTK_A11Y=none
+
+  # ── Network (required to reach office.com) ───────────────────────────────
+  - --share=network
+
+  # ── Sound (WebKit media / notifications) ─────────────────────────────────
+  - --socket=pulseaudio
+
+modules:
+  - name: office-gtk4
+    buildsystem: simple
+    build-commands:
+      # Python source
+      - install -Dm644 Office-GTK4.py /app/share/office-gtk4/office-gtk4.py
+
+      # Launcher wrapper
+      - install -Dm755 office-gtk4.sh /app/bin/office-gtk4
+
+      # .desktop entry
+      - install -Dm644 io.github.mrks1469.office-gtk4.desktop /app/share/applications/io.github.mrks1469.office-gtk4.desktop
+
+      # Scalable icon
+      - install -Dm644 io.github.mrks1469.office-gtk4.svg /app/share/icons/hicolor/scalable/apps/io.github.mrks1469.office-gtk4.svg
+
+      # AppStream metainfo
+      - install -Dm644 io.github.mrks1469.office-gtk4.metainfo.xml /app/share/metainfo/io.github.mrks1469.office-gtk4.metainfo.xml
+
+    sources:
+      - type: file
+        path: Office-GTK4.py
+
+      # Launcher script as a real file — heredoc tricks are unreliable in
+      - type: file
+        path: office-gtk4.sh
+
+      - type: file
+        path: io.github.mrks1469.office-gtk4.desktop
+
+      - type: file
+        path: io.github.mrks1469.office-gtk4.svg
+
+      - type: file
+        path: io.github.mrks1469.office-gtk4.metainfo.xml

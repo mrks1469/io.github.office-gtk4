@@ -14,8 +14,10 @@
   
   <screenshots>
   <screenshot type="default">
+    <caption>Main interface of Office-GTK4</caption>
     <image>https://raw.githubusercontent.com/mrks1469/io.github.office-gtk4/d69dc19227352565744548bcecd5261c7ce3e9c0/Screenshots/screenshot.png</image>
-</screenshots>
+  </screenshot>
+  </screenshots>
 
   <description>
     <p>
@@ -63,5 +65,4 @@
 
   <content_rating type="oars-1.1"/>
 </component>
-
 
